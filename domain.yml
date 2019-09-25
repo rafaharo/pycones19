@@ -1,0 +1,77 @@
+intents:
+  - saludo:
+      triggers: utter_saludo
+  - despedida
+  - negacion
+  - como_estas
+  - estoy_bien
+  - quien_te_ha_creado
+  - no_estoy_bien
+  - de_donde_eres
+  - a_que_hora
+  - siguiente_charla
+  - que_hay_a_las
+  - donde_es
+  - a_que_hora_title
+
+actions:
+- utter_saludo
+- utter_despedida
+- utter_estoy_bien
+- utter_como_estas
+- utter_me_alegro
+- utter_te_puedo_ayudar
+- utter_vaya_hombre
+- utter_mis_padres
+- utter_donde_vivo
+- action_find_next_talks
+- action_find_talk
+
+slots:
+   speaker:
+      type: text
+   found_speakers:
+      type: text
+   confirmed_speaker:
+      type: text
+   talk:
+      type: text
+
+forms:
+  - speaker_form
+
+templates:
+  utter_saludo:
+  - text: "Qué pasa pisha?"
+  - text: "Qué pasa cabesa?"
+  - text: "Qué pasa quillo?"
+
+  utter_despedida:
+    - text: "venga nos vemos"
+
+  utter_estoy_bien:
+    - text: "yo estoy de arte"
+    - text: "aquí estamos chatboteando"
+    - text: "de categoría"
+
+  utter_como_estas:
+    - text: "¿y tu como andas?"
+    - text: "¿y tu que te cuentas?"
+
+  utter_me_alegro:
+    - text: "me alegro"
+    - text: "wena esa"
+
+  utter_te_puedo_ayudar:
+    - text: "¿qué te hace falta?"
+    - text: "¿qué necesitas?"
+    - text: "¿en qué te puedo ayudar?"
+
+  utter_vaya_hombre:
+    - text: "vaya hombre. Y encima ahora hay que ir a votar otra vez. Bueno, "
+
+  utter_mis_padres:
+    - text: "soy un chatbot creado por dos paquetes programando en python....bueno sobretodo uno"
+
+  utter_donde_vivo:
+    - text: "normalmente vivo en localhost, pero de vez en cuando hago gasto en Amazon"

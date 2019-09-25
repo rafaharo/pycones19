@@ -1,0 +1,77 @@
+Python para calentar tu casa
+Sistemas de Recomendación con Surprise
+Surprise
+Fragmentar y dearticular redes de crimen. Topología y debilidad de redes
+Big Data en live coding
+Big Data
+Django
+PySOA
+NLP
+Microservice and Serverless Applications with Python: Challenges and opportunities
+Creando aplicaciones con micropython
+Aprendiendo como aprenden las máquinas
+Tamarco: un framework de microservicios
+Drivers en Python o cómo encender luces de colores en un teclado cuando recibo un email
+Exceptional exceptions
+Optimización de una red de evaporadores industriales
+Patrocinada
+Dynamic Optimization and Process Control in Python
+Securizando nuestro código python
+qVista: sistema de información territorial del Ayto. de BCN desarrollado en PyQGis
+Desarrollo Industrial de sistemas embedidos con Python/Django y Raspberry Pi
+Microservicios altamente paralelos para todos
+Service Oriented Architecture with PySOA
+When code is not enough
+f-strings:A format system to rule them all
+Nariz electrónica para la detección de defectos del café con Python
+Patrocinada
+Creando un Deep-bot from scratch
+Organizando chistes con NLP
+Odisea en el lodo:divertida historia sobre heredar un proyecto legacy con gran tech debt y estar alone
+Objetos Hashables
+Mom I want to be a data artist
+Haciendo una galaxia con python: méritos y obstáculos en modelos de programación probabilística
+Using Pypi and docopt to create and share command lines
+Usando Flask en el mundo real: extensiones y buenas prácticas
+Patrocinada
+assertTrue('Testing en Machine Learning')
+Porque una imagen vale más que mil datos. El poder de los gráficos en Python
+Socorro mi hijo quiere ser hacker
+Django Admin Inside Out
+Analiza la salud de tu proyecto con GrimoireLab y Python
+Que la generación Z no rompa tus modelos
+MI CASA: venturas y desventuras de una radioastrónoma en Python
+Desarrollo de Chatbots en Python: RasaNLU
+A practical domain-driven design approach to Nameko microservices
+Economía del Software
+Patrocinada
+Reconocimiento del habla en Python
+Patrocinada
+Machine Learning para proyectos de seguridad
+Procesamiento distribuido con Dask para posicionamiento indoor
+End-to-end machine learning platform for real-time underwriting. A silicon Valley fintech perspective
+Como aprovechar todos los recursos hardware para tus modelos de Reinforcement Learning
+El Show de Truman
+Flow is in the air
+Patrocinada
+De Daniel San a Sr. Miyagi en Python: aprendiendo mediante katas
+A/B Testing to make advertising precise in Nigeria
+Introducción al testeo con Mocks
+Ofuscación de ficheros con esteganografía
+MircoPython como lenguaje de desarrollo para dispositivos IoT
+Patrocinada
+Extendiendo Django para que se conecte a otras Bases de Datos: escribe tu propio backend
+Be a good colleague and help your Security Engineer
+Patrocinada
+Game of Patterns
+Data Science meets Economy:how to meassure social impact from consumption data
+Multiprocessing Manager for Experiments
+El lado oscuro del Scraping en Recruiting
+Implementación de flujos de tareas mediante Airflow
+Using Python to manipulate Data in experimental mechanics: A test case in Atomic Microscopy Force
+Lightning Talks
+Keynote
+Keynote
+Keynote
+Keynote
+Lightning Talks
