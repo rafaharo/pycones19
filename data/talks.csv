@@ -1,70 +1,70 @@
 Title,Speakers,Day,Type,Place,Start,End
-Python para calentar tu casa,Héctor Pablos López,Sábado,Charla,Sala I,11:30,12:10
-Sistemas de Recomendación con Surprise,Antonio David Pérez/Rafa Haro,Sábado,Charla,Sala II,11:30,12:10
-Fragmentar y dearticular redes de crimen. Topología y debilidad de redes,Juan Carlos González-Avella,Sábado,Charla,Sala III,11:30,12:10
-Big Data en live coding,Guillem Borrel,Sábado,Charla,Sala IV,11:30,12:10
-Microservice and Serverless Applications with Python: Challenges and opportunities,Nilo Ney Coutinho Menezes,Sábado,Charla,Sala V,11:30,12:10
+Python para calentar tu casa,Héctor Pablos López,Sábado,Charla,Sala Eventbrite,11:30,12:10
+Sistemas de Recomendación con Surprise,Antonio David Pérez/Rafa Haro,Sábado,Charla,Salón Microsoft,11:30,12:10
+Fragmentar y dearticular redes de crimen. Topología y debilidad de redes,Juan Carlos González-Avella,Sábado,Charla,Sala Ilion Animation,11:30,12:10
+Big Data en live coding,Guillem Borrel,Sábado,Charla,Sala PSF,11:30,12:10
+Microservice and Serverless Applications with Python: Challenges and opportunities,Nilo Ney Coutinho Menezes,Sábado,Charla,Sala Universidad de Alicante,11:30,12:10
 Creando aplicaciones con micropython,José Laica,Sábado,Taller,Taller 1,11:30,13:45
 Aprendiendo como aprenden las máquinas,Jordi Contesti/Francisco Correoso/Guillem Duran/Juan Carlos González/Antonio Tugores,Sábado,Taller,Taller 2,11:30,13:45
-Tamarco: un framework de microservicios,José Melero Fernández,Sábado,Charla,Sala I,12:10,12:30
-Drivers en Python o cómo encender luces de colores en un teclado cuando recibo un email,Javier Torres,Sábado,Charla,Sala II,12:10,12:30
-Exceptional exceptions,Mario Corchero,Sábado,Charla,Sala III,12:10,12:30
-Optimización de una red de evaporadores industriales,María Marcos,Sábado,Charla,Sala IV,12:10,12:50
-Patrocinada,Ilion Animation Studios,Sábado,Charla,Sala V,12:10,12:50
-Dynamic Optimization and Process Control in Python,Francisco Navarro-Brull,Sábado,Charla,Sala IV,12:50,13:30
-Securizando nuestro código python,Víctor Torre,Sábado,Charla,Sala V,12:50,13:30
-qVista: sistema de información territorial del Ayto. de BCN desarrollado en PyQGis,Jordi Cebrian/Noemi Rodríguez,Sábado,Charla,Sala III,12:50,13:30
-Desarrollo Industrial de sistemas embedidos con Python/Django y Raspberry Pi,José A. Rocamonde,Sábado,Charla,Sala II,12:50,13:30
-Microservicios altamente paralelos para todos,Alberto Fernández Valiente,Sábado,Charla,Sala I,12:50,13:30
-Service Oriented Architecture with PySOA,Jorge Barata,Sábado,Charla,Sala I,13:30,13:50
-When code is not enough,Juan Ernesto Biondi Pérez,Sábado,Charla,Sala II,13:30,13:50
-f-strings:A format system to rule them all,Juan Diego Godoy Robles,Sábado,Charla,Sala III,13:30,13:50
-Nariz electrónica para la detección de defectos del café con Python,Katerine Perdomo Moreno,Sábado,Charla,Sala IV,13:30,13:50
-Patrocinada,Travelperk,Sábado,Charla,Sala V,13:30,13:50
+Tamarco: un framework de microservicios,José Melero Fernández,Sábado,Charla,Sala Eventbrite,12:10,12:30
+Drivers en Python o cómo encender luces de colores en un teclado cuando recibo un email,Javier Torres,Sábado,Charla,Salón Microsoft,12:10,12:30
+Exceptional exceptions,Mario Corchero,Sábado,Charla,Sala Ilion Animation,12:10,12:30
+Optimización de una red de evaporadores industriales,María Marcos,Sábado,Charla,Sala PSF,12:10,12:50
+Patrocinada,Ilion Animation Studios,Sábado,Charla,Sala Universidad de Alicante,12:10,12:50
+Dynamic Optimization and Process Control in Python,Francisco Navarro-Brull,Sábado,Charla,Sala PSF,12:50,13:30
+Securizando nuestro código python,Víctor Torre,Sábado,Charla,Sala Universidad de Alicante,12:50,13:30
+qVista: sistema de información territorial del Ayto. de BCN desarrollado en PyQGis,Jordi Cebrian/Noemi Rodríguez,Sábado,Charla,Sala Ilion Animation,12:50,13:30
+Desarrollo Industrial de sistemas embedidos con Python/Django y Raspberry Pi,José A. Rocamonde,Sábado,Charla,Salón Microsoft,12:50,13:30
+Microservicios altamente paralelos para todos,Alberto Fernández Valiente,Sábado,Charla,Sala Eventbrite,12:50,13:30
+Service Oriented Architecture with PySOA,Jorge Barata,Sábado,Charla,Sala Eventbrite,13:30,13:50
+When code is not enough,Juan Ernesto Biondi Pérez,Sábado,Charla,Salón Microsoft,13:30,13:50
+f-strings:A format system to rule them all,Juan Diego Godoy Robles,Sábado,Charla,Sala Ilion Animation,13:30,13:50
+Nariz electrónica para la detección de defectos del café con Python,Katerine Perdomo Moreno,Sábado,Charla,Sala PSF,13:30,13:50
+Patrocinada,Travelperk,Sábado,Charla,Sala Universidad de Alicante,13:30,13:50
 Creando un Deep-bot from scratch,Edgar Pérez Sampedro/Javier Jiménez del Peso,Sábado,Taller,Taller 1,15:30,17:50
 Organizando chistes con NLP,Julio Martínez,Sábado,Taller,Taller 2,15:30,17:50
-Odisea en el lodo:divertida historia sobre heredar un proyecto legacy con gran tech debt y estar alone,Miguel Jiménez,Sábado,Charla,Sala I,15:30,16:10
-Objetos Hashables,Víctor Terrón,Sábado,Charla,Sala II,15:30,16:10
-Mom I want to be a data artist,Alberto Romeu,Sábado,Charla,Sala III,15:30,16:10
-Haciendo una galaxia con python: méritos y obstáculos en modelos de programación probabilística,Vital Fernández,Sábado,Charla,Sala IV,15:30,16:10
-Using Pypi and docopt to create and share command lines,Tony Aldon,Sábado,Charla,Sala V,15:30,16:10
-Usando Flask en el mundo real: extensiones y buenas prácticas,Juan José Lozano Gómez,Sábado,Charla,Sala I,16:10,16:30
-Patrocinada,Trustyou,Sábado,Charla,Sala II,16:10,16:30
-assertTrue('Testing en Machine Learning'),Beatriz Gómez,Sábado,Charla,Sala III,16:10,16:30
-Porque una imagen vale más que mil datos. El poder de los gráficos en Python,María Ángeles Rodríguez,Sábado,Charla,Sala IV,16:10,16:30
-Socorro mi hijo quiere ser hacker,Virginia Tovar/Jorge Brocal,Sábado,Charla,Sala V,16:10,16:30
-Django Admin Inside Out,Antonio Melé/Álvaro León/David García,Sábado,Charla,Sala I,16:30,17:10
-Analiza la salud de tu proyecto con GrimoireLab y Python,Valerio Cosentino,Sábado,Charla,Sala II,16:30,17:10
-Que la generación Z no rompa tus modelos,Alicia Pérez,Sábado,Charla,Sala III,16:30,17:10
-MI CASA: venturas y desventuras de una radioastrónoma en Python,Ana Karla Díaz Rodríguez,Sábado,Charla,Sala IV,16:30,17:10
-Desarrollo de Chatbots en Python: RasaNLU,Rafa Haro/Antonio David Pérez,Sábado,Charla,Sala V,16:30,17:10
-A practical domain-driven design approach to Nameko microservices,Julio Vicente Trigo Guijarro,Sábado,Charla,Sala I,17:10,17:50
-Economía del Software,Miguel González Flores,Sábado,Charla,Sala II,17:10,17:50
-Patrocinada,Eventbrite,Sábado,Charla,Sala III,17:10,17:50
-Reconocimiento del habla en Python,Javier Jorge Cano,Sábado,Charla,Sala IV,17:10,17:50
-Patrocinada,Orange,Sábado,Charla,Sala V,17:10,17:50
-Machine Learning para proyectos de seguridad,José Manuel Ortega Candel,Domingo,Charla,Sala I,11:30,12:10
-Procesamiento distribuido con Dask para posicionamiento indoor,Álvaro Arredondo/Cayetano Benavent/Josema Camacho,Domingo,Charla,Sala II,11:30,12:10
-End-to-end machine learning platform for real-time underwriting. A silicon Valley fintech perspective,Pablo Vargas/Pablo López/Hossein Ghodrati,Domingo,Charla,Sala III,11:30,12:10
-Como aprovechar todo los recursos hardware para tus modelos de Reinforcement Learning,Rubén García,Domingo,Charla,Sala IV,11:30,12:10
-El Show de Truman,Jimena Escobar Bermúdez,Domingo,Charla,Sala V,11:30,12:10
+Odisea en el lodo:divertida historia sobre heredar un proyecto legacy con gran tech debt y estar alone,Miguel Jiménez,Sábado,Charla,Sala Eventbrite,15:30,16:10
+Objetos Hashables,Víctor Terrón,Sábado,Charla,Salón Microsoft,15:30,16:10
+Mom I want to be a data artist,Alberto Romeu,Sábado,Charla,Sala Ilion Animation,15:30,16:10
+Haciendo una galaxia con python: méritos y obstáculos en modelos de programación probabilística,Vital Fernández,Sábado,Charla,Sala PSF,15:30,16:10
+Using Pypi and docopt to create and share command lines,Tony Aldon,Sábado,Charla,Sala Universidad de Alicante,15:30,16:10
+Usando Flask en el mundo real: extensiones y buenas prácticas,Juan José Lozano Gómez,Sábado,Charla,Sala Eventbrite,16:10,16:30
+Patrocinada,Trustyou,Sábado,Charla,Salón Microsoft,16:10,16:30
+assertTrue('Testing en Machine Learning'),Beatriz Gómez,Sábado,Charla,Sala Ilion Animation,16:10,16:30
+Porque una imagen vale más que mil datos. El poder de los gráficos en Python,María Ángeles Rodríguez,Sábado,Charla,Sala PSF,16:10,16:30
+Socorro mi hijo quiere ser hacker,Virginia Tovar/Jorge Brocal,Sábado,Charla,Sala Universidad de Alicante,16:10,16:30
+Django Admin Inside Out,Antonio Melé/Álvaro León/David García,Sábado,Charla,Sala Eventbrite,16:30,17:10
+Analiza la salud de tu proyecto con GrimoireLab y Python,Valerio Cosentino,Sábado,Charla,Salón Microsoft,16:30,17:10
+Que la generación Z no rompa tus modelos,Alicia Pérez,Sábado,Charla,Sala Ilion Animation,16:30,17:10
+MI CASA: venturas y desventuras de una radioastrónoma en Python,Ana Karla Díaz Rodríguez,Sábado,Charla,Sala PSF,16:30,17:10
+Desarrollo de Chatbots en Python: RasaNLU,Rafa Haro/Antonio David Pérez,Sábado,Charla,Sala Universidad de Alicante,16:30,17:10
+A practical domain-driven design approach to Nameko microservices,Julio Vicente Trigo Guijarro,Sábado,Charla,Sala Eventbrite,17:10,17:50
+Economía del Software,Miguel González Flores,Sábado,Charla,Salón Microsoft,17:10,17:50
+Patrocinada,Eventbrite,Sábado,Charla,Sala Ilion Animation,17:10,17:50
+Reconocimiento del habla en Python,Javier Jorge Cano,Sábado,Charla,Sala PSF,17:10,17:50
+Patrocinada,Orange,Sábado,Charla,Sala Universidad de Alicante,17:10,17:50
+Machine Learning para proyectos de seguridad,José Manuel Ortega Candel,Domingo,Charla,Sala Eventbrite,11:30,12:10
+Procesamiento distribuido con Dask para posicionamiento indoor,Álvaro Arredondo/Cayetano Benavent/Josema Camacho,Domingo,Charla,Salón Microsoft,11:30,12:10
+End-to-end machine learning platform for real-time underwriting. A silicon Valley fintech perspective,Pablo Vargas/Pablo López/Hossein Ghodrati,Domingo,Charla,Sala Ilion Animation,11:30,12:10
+Como aprovechar todo los recursos hardware para tus modelos de Reinforcement Learning,Rubén García,Domingo,Charla,Sala PSF,11:30,12:10
+El Show de Truman,Jimena Escobar Bermúdez,Domingo,Charla,Sala Universidad de Alicante,11:30,12:10
 Flow is in the air,Javier Martínez Anibarro,Domingo,Taller,Taller 1,11:30,13:50
-Patrocinada,Intellygenz,Domingo,Charla,Sala I,12:10,12:30
-De Daniel San a Sr. Miyagi en Python: aprendiendo mediante katas,Irene Pérez Encinar,Domingo,Charla,Sala III,12:10,12:30
-A/B Testing to make advertising precise in Nigeria,Adeshola Afolabi,Domingo,Charla,Sala IV,12:10,12:30
-Introducción al testeo con Mocks,Ester Ramos Carmona,Domingo,Charla,Sala V,12:10,12:30
-Ofuscación de ficheros con esteganografía,Gonzalo López Valero/Diego Silveira Madrid,Domingo,Charla,Sala I,12:30,12:50
-MircoPython como lenguaje de desarrollo para dispositivos IoT,José Laica,Domingo,Charla,Sala III,12:30,12:50
-Patrocinada,Ravenpack,Domingo,Charla,Sala IV,12:30,12:50
-Extendiendo Django para que se conecte a otras Bases de Datos: escribe tu propio backend,Javier Abadía,Domingo,Charla,Sala II,12:10,12:50
-Be a good colleague and help your Security Engineer,Adam Stevko,Domingo,Charla,Sala I,12:50,13:30
-Patrocinada,Microsoft,Domingo,Charla,Sala II,12:50,13:30
-Game of Patterns,Álvaro León/Antonio Melé/David García,Domingo,Charla,Sala III,12:50,13:30
-Data Science meets Economy:how to meassure social impact from consumption data,Marta Rivero Alba,Domingo,Charla,Sala IV,12:50,13:30
-Multiprocessing Manager for Experiments,Carlos Perales-González,Domingo,Charla,Sala I,13:30,13:50
-El lado oscuro del Scraping en Recruiting,Teresa Salazar García-Rosales,Domingo,Charla,Sala II,13:30,13:50
-Implementación de flujos de tareas mediante Airflow,Jordi Contesti,Domingo,Charla,Sala III,13:30,13:50
-Using Python to manipulate Data in experimental mechanics: A test case in Atomic Microscopy Force,Matthew Eaton,Domingo,Charla,Sala IV,13:30,13:50
+Patrocinada,Intellygenz,Domingo,Charla,Sala Eventbrite,12:10,12:30
+De Daniel San a Sr. Miyagi en Python: aprendiendo mediante katas,Irene Pérez Encinar,Domingo,Charla,Sala Ilion Animation,12:10,12:30
+A/B Testing to make advertising precise in Nigeria,Adeshola Afolabi,Domingo,Charla,Sala PSF,12:10,12:30
+Introducción al testeo con Mocks,Ester Ramos Carmona,Domingo,Charla,Sala Universidad de Alicante,12:10,12:30
+Ofuscación de ficheros con esteganografía,Gonzalo López Valero/Diego Silveira Madrid,Domingo,Charla,Sala Eventbrite,12:30,12:50
+MircoPython como lenguaje de desarrollo para dispositivos IoT,José Laica,Domingo,Charla,Sala Ilion Animation,12:30,12:50
+Patrocinada,Ravenpack,Domingo,Charla,Sala PSF,12:30,12:50
+Extendiendo Django para que se conecte a otras Bases de Datos: escribe tu propio backend,Javier Abadía,Domingo,Charla,Salón Microsoft,12:10,12:50
+Be a good colleague and help your Security Engineer,Adam Stevko,Domingo,Charla,Sala Eventbrite,12:50,13:30
+Patrocinada,Microsoft,Domingo,Charla,Salón Microsoft,12:50,13:30
+Game of Patterns,Álvaro León/Antonio Melé/David García,Domingo,Charla,Sala Ilion Animation,12:50,13:30
+Data Science meets Economy:how to meassure social impact from consumption data,Marta Rivero Alba,Domingo,Charla,Sala PSF,12:50,13:30
+Multiprocessing Manager for Experiments,Carlos Perales-González,Domingo,Charla,Sala Eventbrite,13:30,13:50
+El lado oscuro del Scraping en Recruiting,Teresa Salazar García-Rosales,Domingo,Charla,Salón Microsoft,13:30,13:50
+Implementación de flujos de tareas mediante Airflow,Jordi Contesti,Domingo,Charla,Sala Ilion Animation,13:30,13:50
+Using Python to manipulate Data in experimental mechanics: A test case in Atomic Microscopy Force,Matthew Eaton,Domingo,Charla,Sala PSF,13:30,13:50
 Lightning Talks,---,Domingo,Charla,---,15:30,16:00
 Keynote,---,Domingo,Charla,Paraninfo,16:00,17:00
 Keynote,---,Domingo,Charla,Paraninfo,9:30,10:30

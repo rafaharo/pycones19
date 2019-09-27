@@ -9,10 +9,10 @@
 from collections import defaultdict
 
 import yaml
-from datetime import datetime
+from datetime import datetime, timedelta
 from elasticsearch_dsl import connections
 from rasa_sdk import Action, Tracker
-from rasa_sdk.events import SlotSet
+from rasa_sdk.events import SlotSet, ReminderScheduled
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.forms import FormAction
 from typing import Any, Text, Dict, List, Union, Optional
@@ -30,6 +30,31 @@ with open("config.yml", 'r') as stream:
 
 connections.create_connection(hosts=[elastic_endpoint])
 
+
+class ActionHelloAndScheduleReminder(Action):
+
+    def name(self) -> Text:
+        return "action_hello"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        dispatcher.utter_template('utter_saludo', tracker)
+        return [ReminderScheduled('action_schedule_reminder', datetime.now() + timedelta(seconds=30),
+                                  kill_on_user_message=True)]
+
+
+class ActionScheduleReminder(Action):
+
+    def name(self) -> Text:
+        return "action_schedule_reminder"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        dispatcher.utter_template('utter_reminder', tracker)
+        return [ReminderScheduled('action_schedule_reminder', datetime.now() + timedelta(seconds=30),
+                                  kill_on_user_message=True)]
 
 class ActionFindNextTalks(Action):
 

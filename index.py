@@ -11,7 +11,7 @@ if __name__== "__main__":
     talks_index.delete(ignore=404)
     talks_index.create()
 
-    talks_df = pd.read_csv('./data/talks.txt')
+    talks_df = pd.read_csv('./data/talks.csv')
     print("Number of talks in the report: {}".format(len(talks_df)))
 
     for index, row in talks_df.iterrows():

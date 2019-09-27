@@ -1,6 +1,6 @@
 intents:
-  - saludo:
-      triggers: utter_saludo
+  - saludo
+  - action_hello
   - despedida
   - negacion
   - como_estas
@@ -26,6 +26,8 @@ actions:
 - utter_donde_vivo
 - action_find_next_talks
 - action_find_talk
+- action_schedule_reminder
+- action_hello
 
 slots:
    speaker:
@@ -45,6 +47,12 @@ templates:
   - text: "Qué pasa pisha?"
   - text: "Qué pasa cabesa?"
   - text: "Qué pasa quillo?"
+
+  utter_reminder:
+  - text: "¿Querías algo?"
+    image: "https://media.giphy.com/media/5wWf7H0qoWaNnkZBucU/giphy.gif"
+  - text: "¿Hola?"
+    image: "https://media.giphy.com/media/tXL4FHPSnVJ0A/giphy.gif"
 
   utter_despedida:
     - text: "venga nos vemos"

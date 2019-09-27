@@ -1,3 +1,7 @@
+## say hello
+* saludo
+ - action_hello
+
 ## say goodbye
 * despedida
   - utter_despedida
