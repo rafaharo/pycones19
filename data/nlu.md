@@ -90,11 +90,19 @@
 ## intent:que_hay_a_las
 - que charlas hay a las [11:30](time)?
 - que hay a las [12](time)?
-- que charlas hay [hoy](when) a las [17:00](time)
-- que hay [mañana](when) a las [14:30](time)
-- que charlas hay [el sabado](when) a las [11:00](time)
-- charlas [el domingo](when) a la 13:00?
-- quién presenta [el sabado](when) a las 17?
+- que charlas hay [hoy](day) a las [17:00](time)
+- que hay [mañana](day) a las [14:30](time)
+- que charlas hay el [sabado](day) a las [11:00](time)
+- charlas el [domingo](day) a la [13:00](time)?
+- quién presenta el [sabado](day) a las [17](time)?
+- que charlas hay el [sabado](day)
+- charlas del [domingo](day)
+- [hoy](day)
+- [sabado](day)
+- el [domingo](day)
+- [12:10](time)
+- [17](time)
+- [1](time)
 
 ## intent:donde_es
 - dónde es la charla de [Antonio](speaker)
@@ -103,7 +111,7 @@
 ## regex:time
 - ([01]?[0-9]|2[0-3])(:[0-5][0-9])?
 
-## lookup:when
+## lookup:day
 - hoy
 - mañana
 - el sabado

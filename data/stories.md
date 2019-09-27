@@ -60,5 +60,25 @@
   - slot{"talk":"microservicios"}
   - action_find_talk
   - action_listen
+
+## que hay a las
+* que_hay_a_las
+  - slot{"time":"11:30"}
+  - slot{"day":"sabado"}
+  - action_find_talks_by_time
+  - action_listen
+  
+## que hay a las sin dia
+* que_hay_a_las
+  - action_find_talks_by_time{"time":"11:30"}
+  - form{"name": "talk_form"}
+  - action_find_talks_by_time{"time":"11:30","day":"sabado"}
+  
+## que hay a las sin hora
+* que_hay_a_las
+  - action_find_talks_by_time{"day":"domingo"}
+  - form{"name": "talk_form"}
+  - action_find_talks_by_time{"time":"11:30","day":"domingo"}
+  
   
   

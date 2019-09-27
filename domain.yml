@@ -28,6 +28,7 @@ actions:
 - action_find_talk
 - action_schedule_reminder
 - action_hello
+- action_find_talks_by_time
 
 slots:
    speaker:
@@ -38,9 +39,15 @@ slots:
       type: text
    talk:
       type: text
+   time:
+      type: text
+   day:
+      type: text
+
 
 forms:
   - speaker_form
+  - talk_form
 
 templates:
   utter_saludo:

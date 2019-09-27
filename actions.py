@@ -56,6 +56,7 @@ class ActionScheduleReminder(Action):
         return [ReminderScheduled('action_schedule_reminder', datetime.now() + timedelta(seconds=30),
                                   kill_on_user_message=True)]
 
+
 class ActionFindNextTalks(Action):
 
     def name(self) -> Text:
@@ -72,21 +73,126 @@ class ActionFindNextTalks(Action):
         if query.count() == 0:
             dispatcher.utter_message("Pues ahora mismo no encuentro ninguna")
         else:
-            firstTalk = query[0].execute()
-            talks = [firstTalk[0]]
-            results = query[1:].execute()
-            for talk in results:
-                if talk.start == firstTalk[0].start and talk.day == firstTalk[0].day:
-                    talks.append(talk)
-                else:
-                    break
             message = "Las próximas charlas que he encontrado son:\n"
-            titles = [t.title + " - " + '/'.join(t.speakers) for t in talks]
-            message += '\n'.join(titles)
+            message += range_query_to_message(query)
             dispatcher.utter_message(message)
 
         return []
 
+
+class ActionFindTalksByTime(Action):
+
+    def name(self) -> Text:
+        return "action_find_talks_by_time"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        search = Talk.search()
+        time_slot = tracker.get_slot('time')
+        day_slot = tracker.get_slot('day')
+
+        if time_slot and day_slot:
+            if day_slot.lower() == 'hoy' or day_slot.lower() == 'mañana':
+                weekday = datetime.today().weekday()
+                if day_slot.lower() == 'mañana':
+                    weekday += 1
+                if weekday == 5:
+                    day = 'Sabado'
+                elif weekday == '6':
+                    day = 'Domingo'
+                else:
+                    dispatcher.utter_message("Solo tengo registradas charlas el Sábado y Domingo\n")
+                    return []
+            else:
+                import unidecode
+                day = unidecode.unidecode(day_slot).lower()
+                if day != 'sabado' and day != 'domingo':
+                    dispatcher.utter_message("Solo tengo registradas charlas el Sábado y Domingo\n")
+                    return []
+
+            if ':' in time_slot:
+                time_parts = time_slot.split(':')
+                hour = int(time_parts[0])
+                minute = int(time_parts[1])
+            else:
+                hour = int(time_slot)
+                minute = 0
+
+            if day == 'sabado':
+                date = datetime(year=2019, month=10, day=5, hour=hour, minute=minute)
+            else:
+                date = datetime(year=2019, month=10, day=6, hour=hour, minute=minute)
+
+            query = search.sort('start').\
+                query('term', day=day).\
+                query('range', start={'gte': date})
+            if query.count() == 0:
+                dispatcher.utter_message("No he encontrado ninguna charla el dia {} a las {}\n".format(day, time_slot))
+            else:
+                message = "He encontrado las siguientes charlas el dia {} a las {}:\n".format(day, time_slot)
+                message += range_query_to_message(query)
+                dispatcher.utter_message(message)
+                return[SlotSet('time', None), SlotSet('day', None)]
+
+        elif time_slot and not day_slot:
+            dispatcher.utter_message("¿Qué día, Sábado o Domingo?\n")
+        elif day_slot and not time_slot:
+            dispatcher.utter_message("¿A qué hora?\n")
+        else:
+            dispatcher.utter_message("He entendido que buscas una charla, pero no he encontrado día ni hora\n")
+
+        return []
+
+class SpeakerForm(FormAction):
+
+    def name(self) -> Text:
+        """Unique identifier of the form"""
+        return "talk_form"
+
+    @staticmethod
+    def required_slots(tracker: Tracker) -> List[Text]:
+        """A list of required slots that the form has to fill"""
+
+        return ["day", "time"]
+
+    def slot_mappings(self) -> Dict[Text, Union[Dict, List[Dict]]]:
+        """A dictionary to map required slots to
+            - an extracted entity
+            - intent: value pairs
+            - a whole message
+            or a list of them, where a first match will be picked"""
+
+        return {
+            "day": self.from_entity("day"),
+            "time": self.from_entity("time")
+        }
+
+    def submit(
+            self,
+            dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any],
+    ) -> List[Dict]:
+        """Define what the form has to do
+            after all required slots are filled"""
+
+        dispatcher.utter_message("Perfecto! Voy a ver que encuentro\n")
+        return []
+
+
+def range_query_to_message(query):
+    first_talk = query[0].execute()
+    talks = [first_talk[0]]
+    results = query[1:].execute()
+    for talk in results:
+        if talk.start == first_talk[0].start and talk.day == first_talk[0].day:
+            talks.append(talk)
+        else:
+            break
+    titles = [t.title + " - " + '/'.join(t.speakers) + " en " + t.place for t in talks]
+    return '\n'.join(titles)
 
 class ActionFindTalk(Action):
 

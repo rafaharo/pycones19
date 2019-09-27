@@ -1,4 +1,4 @@
-from elasticsearch_dsl import Document, Integer, Keyword, Text, Date
+from elasticsearch_dsl import Document, Keyword, Text, Date
 
 
 class Talk(Document):
