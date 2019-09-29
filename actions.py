@@ -53,8 +53,7 @@ class ActionScheduleReminder(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         dispatcher.utter_template('utter_reminder', tracker)
-        return [ReminderScheduled('action_schedule_reminder', datetime.now() + timedelta(seconds=30),
-                                  kill_on_user_message=True)]
+        return []
 
 
 class ActionFindNextTalks(Action):
