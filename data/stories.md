@@ -44,18 +44,21 @@
 * a_que_hora
   - slot{"speaker":"Rafa Haro"}
   - action_find_talk
+  - action_listen
 
 ## a que hora es la charla desam
-* a_que_hora
-  - action_find_talk{"speaker":"Rafa Haro"}
-  - slot{"found_speakers": "Antonio"}
-  - form{"name": "speaker_form"}
-  - slot{"requested_slot": "confirmed_speaker"}
-  - form{"name":null}
+* a_que_hora{"speaker": "antonio"}
+    - slot{"speaker": "antonio"}
+    - action_find_talk
+    - slot{"found_speakers": ["Antonio David Pérez", "Antonio Tugores", "Antonio Melé"]}
+    - speaker_form
+    - form{"name": "speaker_form"}
+    - slot{"requested_slot": "confirmed_speaker"}
   
 ## a que hora es la charla sobre
 * a_que_hora_title
   - action_find_talk{"talk":"microservicios"}
+  - action_listen
 
 ## que hay a las
 * que_hay_a_las

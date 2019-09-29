@@ -216,7 +216,7 @@ class ActionFindTalk(Action):
                                          format('\n'.join(talks)))
             else:
                 dispatcher.utter_message("No he encontrado ninguna charla sobre ese tema. ¿Puedes reformular la pregunta?")
-            return []
+            return [SlotSet('talk', None)]
 
         speaker = tracker.get_slot('speaker')
         if speaker:
