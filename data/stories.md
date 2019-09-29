@@ -44,22 +44,18 @@
 * a_que_hora
   - slot{"speaker":"Rafa Haro"}
   - action_find_talk
-  - action_listen
 
 ## a que hora es la charla desam
 * a_que_hora
-  - slot{"speaker":"Rafa Haro"}
-  - action_find_talk
+  - action_find_talk{"speaker":"Rafa Haro"}
   - slot{"found_speakers": "Antonio"}
-  - speaker_form
   - form{"name": "speaker_form"}
   - slot{"requested_slot": "confirmed_speaker"}
+  - form{"name":null}
   
 ## a que hora es la charla sobre
 * a_que_hora_title
-  - slot{"talk":"microservicios"}
-  - action_find_talk
-  - action_listen
+  - action_find_talk{"talk":"microservicios"}
 
 ## que hay a las
 * que_hay_a_las
