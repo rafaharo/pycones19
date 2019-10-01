@@ -15,13 +15,6 @@
 - enga quillo
 - bye
 
-## intent:negacion
-- no
-- nunca
-- no creo
-- que va
-- te estas equivocando
-
 ## intent:como_estas
 - Cómo estás
 - Cómo te encuentras
@@ -69,6 +62,8 @@
 - a que hora es la charla de [antonio](speaker)
 - a qué hora es la presentación de [Orange](speaker)
 - cuando presenta [Ravenpack](speaker)
+- a que hora es la charla de [irene](speaker)
+- cuando es la charla de [david garcia](speaker)
 
 ## intent:a_que_hora_title
 - a qué hora es la charla sobre [microservicios](talk)

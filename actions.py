@@ -6,16 +6,19 @@
 
 
 # This is a simple example for a custom action which utters "Hello World!"
+import string
 from collections import defaultdict
 
 import yaml
+import unidecode
 from datetime import datetime, timedelta
-from elasticsearch_dsl import connections
+from elasticsearch_dsl import connections, Q
 from rasa_sdk import Action, Tracker
 from rasa_sdk.events import SlotSet, ReminderScheduled
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.forms import FormAction
 from typing import Any, Text, Dict, List, Union, Optional
+from stop_words import get_stop_words
 
 from model import Talk
 
@@ -29,6 +32,35 @@ with open("config.yml", 'r') as stream:
         print(exc)
 
 connections.create_connection(hosts=[elastic_endpoint])
+
+talks_db = {}
+stop_words = get_stop_words('es')
+
+
+def tokenize(text):
+    input_normalized = unidecode.unidecode(text.lower()).strip(string.punctuation)
+    tokens = input_normalized.split(' ')
+    return [token for token in tokens if token not in stop_words]
+
+with open('./data/talks.txt') as fp:
+    lines = fp.readlines()
+    for line in lines:
+        line = line.replace('\n', '')
+        talks_db[line] = tokenize(line)
+
+
+def search_talks_database(tokens):
+    candidates = []
+    winner = 0
+    for talk, tokens_candidates in talks_db.items():
+        intersect = list(set(tokens) & set(tokens_candidates))
+        intersected = len(intersect)
+        if intersected > 0:
+            if intersected > winner:
+                candidates = [talk]
+            elif intersected == winner:
+                candidates.append(talk)
+    return candidates
 
 
 class ActionHelloAndScheduleReminder(Action):
@@ -105,7 +137,6 @@ class ActionFindTalksByTime(Action):
                     dispatcher.utter_message("Solo tengo registradas charlas el Sábado y Domingo\n")
                     return []
             else:
-                import unidecode
                 day = unidecode.unidecode(day_slot).lower()
                 if day != 'sabado' and day != 'domingo':
                     dispatcher.utter_message("Solo tengo registradas charlas el Sábado y Domingo\n")
@@ -143,6 +174,7 @@ class ActionFindTalksByTime(Action):
             dispatcher.utter_message("He entendido que buscas una charla, pero no he encontrado día ni hora\n")
 
         return []
+
 
 class SpeakerForm(FormAction):
 
@@ -192,6 +224,7 @@ def range_query_to_message(query):
             break
     titles = [t.title + " - " + '/'.join(t.speakers) + " en " + t.place for t in talks]
     return '\n'.join(titles)
+
 
 class ActionFindTalk(Action):
 
@@ -252,8 +285,27 @@ class ActionFindTalk(Action):
                             t.title + " el " + t.day + " a las " + t.start.strftime('%H:%M') + " en " + t.place)
                     dispatcher.utter_message("Las charlas que he encontrado de {} son:\n{}".
                                              format(speaker, '\n'.join(talks)))
+                return[SlotSet("speaker", None)]
         else:
-            dispatcher.utter_message("No he encontrado ninguna charla. ¿Puedes reformular la pregunta?")
+            tokens = tokenize(tracker.latest_message.get('text'))
+            candidates = search_talks_database(tokens)
+            if len(candidates) > 0:
+                shoulds = []
+                for candidate in candidates:
+                    shoulds.append(Q('match_phrase', title=candidate))
+                q = Q('bool', should=shoulds)
+                query = search.sort('start').query(q)
+                if query.count() == 0:
+                    dispatcher.utter_message("No he podido encontrar ninguna charla, lo siento".format(speaker))
+                else:
+                    talks = []
+                    for t in query:
+                        talks.append(
+                            t.title + " el " + t.day + " a las " + t.start.strftime('%H:%M') + " en " + t.place)
+                    dispatcher.utter_message("Las posibles charlas relevantes que he encontrado son:\n{}".
+                                             format('\n'.join(talks)))
+            else:
+                dispatcher.utter_message("No he encontrado ninguna charla. ¿Puedes reformular la pregunta?")
 
         return []
 
@@ -315,7 +367,7 @@ class SpeakerForm(FormAction):
                 matches.append(found_speakers[index])
         else:
             for speaker in found_speakers:
-                if value.lower() in speaker.lower():
+                if unidecode.unidecode(value).lower() in unidecode.unidecode(speaker).lower():
                     matches.append(speaker)
 
         if len(matches) == 0:
@@ -347,4 +399,5 @@ class SpeakerForm(FormAction):
                 t.title + " el " + t.day + " a las " + t.start.strftime('%H:%M') + " en " + t.place)
         dispatcher.utter_message("Las charlas que he encontrado de {} son:\n{}".
                                  format(speaker, '\n'.join(talks)))
-        return [SlotSet("confirmed_speaker", None), SlotSet("found_speakers", None)]
+        self.deactivate()
+        return [SlotSet("confirmed_speaker", None), SlotSet("found_speakers", None), SlotSet('speaker', None)]

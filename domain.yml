@@ -90,3 +90,6 @@ templates:
 
   utter_donde_vivo:
     - text: "normalmente vivo en localhost, pero de vez en cuando hago gasto en Amazon"
+
+  utter_default:
+    - text: "Lo siento pero no te entiendo cabesa. ¿Qué te crees que soy Siri?"
