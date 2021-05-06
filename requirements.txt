@@ -35,7 +35,7 @@ en-core-web-md==2.1.0
 es-core-news-sm==2.1.0
 fbmessenger==6.0.0
 Flask==1.1.1
-Flask-Cors==3.0.8
+Flask-Cors==3.0.9
 future==0.17.1
 gast==0.2.2
 gevent==1.4.0
