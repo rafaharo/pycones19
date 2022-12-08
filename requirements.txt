@@ -12,7 +12,7 @@ boto3==1.9.225
 botocore==1.12.225
 bz2file==0.98
 cachetools==3.1.1
-certifi==2019.6.16
+certifi==2022.12.7
 cffi==1.12.3
 chardet==3.0.4
 Click==7.0
